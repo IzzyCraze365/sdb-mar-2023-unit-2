@@ -138,7 +138,7 @@ if (seconds % 2 === 0) {
   );
 }
 
-// Turnary statement
+// Ternary statement
 seconds % 2 === 0
   ? console.log(
       "The current second is",
@@ -150,3 +150,31 @@ seconds % 2 === 0
       seconds,
       "and it is odd!\nSolved with a Turnary statement."
     );
+
+// ! SWITCHES
+let randomNumber = 7;
+let color = "";
+switch (randomNumber) {
+  case 1:
+    color = "red";
+    break; // This allows it to exit the switch, otherwise it will check the entire switch
+  case 2:
+    color = "blue";
+    break;
+  case 3:
+    color = "pink";
+    break;
+  case 4:
+    color = "purple";
+    break;
+  case 5:
+    color = "white";
+    break;
+  case 6:
+  case 7: // in this example both case 6 and 7 return green
+    color = "green";
+    break;
+  default:
+      color = "unknown";
+}
+console.log(color);
