@@ -92,3 +92,41 @@ let ashleeDogAge = ageConverter(1.8);
 let isaacDogAge = ageConverter(11);
 //console.log(isaacDogAge);
 [johnDogAge, ashleeDogAge, isaacDogAge].map((x =>console.log(x))); // Trcik to console log lots of lines in a row
+
+
+
+// ? create a function calleds divisible
+// ? takes 2 parameters firstNum, secondNum
+// ? return true if it divides evenly otherwise false
+// ? Refactor the code to return a turnary
+/* a number is divisible by another when you devide them and remainder  is 0 (modulus 0) */
+
+function divisible(firstNum, secondNum) {
+  return firstNum % secondNum === 0;
+}
+
+console.log(divisible(11, 2));
+
+// if we can do it in 1 line we do not need function or return just create a variable. 
+// when you are using the arrow functions that are one line
+// - omit the return because it is assumed 
+const divisible2 = (firstNum, secondNum) => firstNum % secondNum === 0;
+
+console.log(divisible2(25,5));
+
+// ? Create a function using the arrow function method called difference
+// ? The function will return the diffence between the two numbers 
+
+const difference = (firstNum, secondNum) => {
+  let diff = Math.abs(firstNum - secondNum);
+  return diff;
+};
+console.log(difference(6, 10));
+
+// ! Arrow Function DANGER: they do not get hoisted. They need to be initialized first (place them above your code before you call it).
+// helper function
+
+function userInputCleaner(word){
+  return word.toLowerCase().trim();
+}
+console.log(userInputCleaner("    RaZZLE DAZzle    "));
