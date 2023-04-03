@@ -13,7 +13,8 @@ to iuse this function in the Terminal
  */
 
 const readline = require("readline");
-const { workerData } = require("worker_threads")
+//const { workerData } = require("worker_threads")
+const computerResponse = require("./changeColors"); // This calls the function from the other JavaScript file - Day 011
 
 const readlineInterface = readline.createInterface(
   process.stdin,
@@ -30,19 +31,21 @@ function ask(questionText) {
     console.log("This works!!!!");
     let firstName = await ask("What is your name?");
     firstName = correctCasing(firstName);
+    //console.log("Inside the Start =", x)
     computerResponse(`Good Morning, ${firstName}`)
   }
   
   start();
-  
 
+const { log } = require("console");
+/* 
 function computerResponse(string){
 let white = "\033[0;39m"
 let yellow = "\033[0;33m";
 
 console.log(yellow + string + white)  //Make the sting come out in Yellow text and then reverts everything back to white
 }
-
+ */
 function correctCasing(word) {
 let wordLowerCase = word.toLowerCase().trim();
 let capitalized = word.charAt(0).toUpperCase() + wordLowerCase.slice(1);
