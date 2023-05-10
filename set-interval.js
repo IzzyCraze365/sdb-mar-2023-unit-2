@@ -18,6 +18,6 @@ function countUp(){
 }
 
 // setInterval will return an ID for the timer
-let timer1 = setInterval(countUp, 1000); // this number is miliseconds
+let timer1 = setInterval(countUp, 1000); // this number is miliseconds, it is the interval of the counting (in this case 1 second)
 
 setTimeout(()=>console.log(count), 7000); // waits until 7 seconds
